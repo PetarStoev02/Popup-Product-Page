@@ -41,39 +41,43 @@ h1 {
   cursor: pointer;
 }
 
-/* .card{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  justify-items: center;
-  height: 50vh;
-  width: 50vw;
-  background: #94a5af;
-  z-index: 0;
-  display: none;
-} */
-
-.card {
+.card{
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 450px;
-  padding: 1.3rem;
-  min-height: 250px;
+  align-content: center;
+  align-items: center;
+  height: 700px;
+  width: 1000px;
   position: absolute;
   z-index: 2;
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 15px;
 }
 
-.card .flex {
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: (1, 1fr);
+  height: 700px;
+  width: 100%;
+}
+
+.grid .left-side {
+  background: #295677;
+  width: 500px;
+  height: 700px;
+}
+
+.right-side {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  
+  flex-direction: column;
+  justify-content: left;
+  width: 450px;
+  padding: 30px;
 }
 
+.right-side h1,
+h2 {
+  text-align: left;
+  padding:10px 0;
+}
 .card p {
   font-family: "Montserrat";
   font-style: normal;
@@ -94,8 +98,9 @@ button {
 .btn {
   display: inline-block;
   padding: 0.8rem 1.4rem;
+  margin-top: 150px;
 
-  background-color: fff;
+  background-color: #fff;
   border: 4px solid #295677;
   border-radius: 15px;
   text-align: center;
@@ -109,11 +114,21 @@ button {
   color: #295677;
 }
 
+.btn:hover{
+  background-color:#295677;
+  color: #fff;
+  transition: ease-in-out 50ms;
+
+
+}
+
 .btn-close {
-  transform: translate(10px, -20px);
-  padding: 0.5rem 0.7rem;
-  background: #eee;
+  transform: translate(430px, 0px);
+  background: #fff;
   border-radius: 50%;
+  width: 26px;
+  padding: 5px;
+  
 }
 
 .overlay {
@@ -135,18 +150,30 @@ button {
 }
 
 .rating {
-  unicode-bidi: bidi-override;
-  direction: rtl;
+  display: flex;
+  flex-direction: row;
 }
-.rating > span {
+.rating  span {
   display: inline-block;
   position: relative;
   width: 1.1em;
   font-size: 20px;
   color: #ffd700;
+
 }
-.rating > span:hover:before,
-.rating > span:hover ~ span:before {
+
+.rating  p{
+padding:0 10px;
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+color: #555555;
+}
+.rating  span:hover:before,
+.rating  span:hover ~ span:before {
   content: "\2605";
   position: absolute;
 }
