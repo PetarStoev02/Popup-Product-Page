@@ -23,6 +23,14 @@ h1 {
   color: #000000;
   padding: 15px;
 }
+
+button {
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+}
+
+/* Display grid popups */
 .parent {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -41,7 +49,8 @@ h1 {
   cursor: pointer;
 }
 
-.card{
+/* Center card */
+.card {
   display: flex;
   align-content: center;
   align-items: center;
@@ -50,7 +59,7 @@ h1 {
   position: absolute;
   z-index: 2;
 }
-
+/* Devide card at 2 sides */
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -59,12 +68,15 @@ h1 {
   width: 100%;
 }
 
+/* Blank side */
+
 .grid .left-side {
   background: #295677;
   width: 500px;
   height: 700px;
 }
 
+/* Content side */
 .right-side {
   display: flex;
   flex-direction: column;
@@ -76,8 +88,9 @@ h1 {
 .right-side h1,
 h2 {
   text-align: left;
-  padding:10px 0;
+  padding: 10px 0;
 }
+
 .card p {
   font-family: "Montserrat";
   font-style: normal;
@@ -89,16 +102,10 @@ h2 {
   margin: 0.4rem 0 0.2rem;
 }
 
-button {
-  cursor: pointer;
-  border: none;
-  font-weight: 600;
-}
-
 .btn {
   display: inline-block;
   padding: 0.8rem 1.4rem;
-  margin-top: 150px;
+  margin-top: 180px;
 
   background-color: #fff;
   border: 4px solid #295677;
@@ -114,21 +121,18 @@ button {
   color: #295677;
 }
 
-.btn:hover{
-  background-color:#295677;
+.btn:hover {
+  background-color: #295677;
   color: #fff;
   transition: ease-in-out 50ms;
-
-
 }
 
 .btn-close {
-  transform: translate(430px, 0px);
+  transform: translate(430px, -10px);
   background: #fff;
   border-radius: 50%;
   width: 26px;
   padding: 5px;
-  
 }
 
 .overlay {
@@ -148,32 +152,32 @@ button {
 .hidden {
   display: none;
 }
-
+/* Stars rating */
 .rating {
   display: flex;
   flex-direction: row;
 }
-.rating  span {
+
+.rating span {
   display: inline-block;
   position: relative;
   width: 1.1em;
   font-size: 20px;
   color: #ffd700;
-
 }
 
-.rating  p{
-padding:0 10px;
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 20px;
-/* identical to box height */
-color: #555555;
+.rating p {
+  padding: 0 10px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #555555;
 }
-.rating  span:hover:before,
-.rating  span:hover ~ span:before {
+
+.rating span:hover:before,
+.rating span:hover ~ span:before {
   content: "\2605";
   position: absolute;
 }
